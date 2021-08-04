@@ -16,18 +16,18 @@ Reproduce the results:
     ```
     proc_1_normalizeTestdata.m
     ```  
-        Then we get 3 files, where the "testdata_nor.txt" is the normalized point cloud data, params.mat is the normalizing paramaters, and if a grid does not contain enough points, the points are recorded in the remain.mat  
+    Then we get 3 files, where the "testdata_nor.txt" is the normalized point cloud data, params.mat is the normalizing paramaters, and if a grid does not contain enough points, the points are recorded in the remain.mat  
     
 3. Run the pointCNN code to downsample and classify the point cloud:  
      ```
     cd /pointCNN
     python test_seg.py --load_ckpt save/epoch_final.ckpt
     ```  
-        The classification results are stored in the file "pointcnn_test.mat". Since the points are shuffled, we need to run the following Matlab code to reconstruct the point cloud:  
+    &ensp&enspThe classification results are stored in the file "pointcnn_test.mat". Since the points are shuffled, we need to run the following Matlab code to reconstruct the point cloud:  
     ```
     proc_3_reconstruct.m
     ```  
-      Then we get a point cloud stored in "pointcnn_test.txt". There are 4 columns in this file, which represent X,Y,Z, label(0 leaf and 1 stem)  
+    &ensp&enspThen we get a point cloud stored in "pointcnn_test.txt". There are 4 columns in this file, which represent X,Y,Z, label(0 leaf and 1 stem)  
     
 4. PointCNN has downsampled the point cloud, and the intial classification results contains lots of errors. Run the stemExtract.exe to refine the classification results using RANSAC method:  
     ```
