@@ -11,4 +11,9 @@ Reproduce the results:
 --------
 
 1. All data and codes are listed in the folder /data. "testdata_original.txt" is the test data in the form of XYZ.
-2. To :
+2. Because the PointCNN only supports a specific number of points (2048) as the input data, we divided the testdata into grids, and normalized the points in each grid by running the following matlab code:  
+    ```
+    proc_1_normalizeTestdata.m
+    ```
+    Then we got 3 files, where the "testdata_nor.txt" is the normalized point cloud data, params.mat is the normalizing paramaters, and if a grid does not contain enough points, the points are recorded in the remain.mat 
+3. run the 
