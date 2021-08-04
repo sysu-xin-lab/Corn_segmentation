@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+SET(CMAKE_TOOLCHAIN_FILE "C:/vcpkg/scripts/buildsystems/vcpkg.cmake")
+SET(VCPKG_TARGET_TRIPLET x64-windows-static)
+project(stemExtract)
+
+find_package(PCL 1.8 REQUIRED)
+if(MSVC)
+  string(REPLACE "/MD" "/MT" CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS})
+  string(REPLACE "/MD" "/MT" CMAKE_CXX_FLAGS_DEBUG ${CMAKE_CXX_FLAGS_DEBUG})
+  string(REPLACE "/MD" "/MT" CMAKE_CXX_FLAGS_RELEASE ${CMAKE_CXX_FLAGS_RELEASE})
+endif(MSVC)
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+
+add_executable (stemExtract stemExtract.cpp)
+target_link_libraries (stemExtract ${PCL_LIBRARIES})
