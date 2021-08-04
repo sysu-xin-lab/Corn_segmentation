@@ -41,3 +41,4 @@ Reproduce the results:
     cornExtract pointcnn_test_refined.txt 0.03 0.9
     ```
     cornExtract requires 3 parameters, The first parameter is the stem segment result we just obtained. The second parameter is the search radius R_nghbr of the DBSCAN method. The last parameter is the percentile of number of neighbors for all points,which is used for core point identification in the DBSCAN method.
+    Then we get a point cloud stored in "pointcnn_test_refined_cluster.txt". There are 7 columns in this file, which represent X,Y,Z,R,G,B, label(1~40 for each individual maize plant)  
