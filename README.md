@@ -12,7 +12,7 @@ Reproduce the results:
 
 1. All data and codes are listed in the folder /data. "testdata_original.txt" is the test data in the form of XYZ.  
 
-2. Because the PointCNN only supports a specific number of points (2048) as the input data, we divide the testdata into grids, and normalize the points in each grid by running the following matlab code:  
+2. Because the PointCNN only supports a specific number of points (2048) as input, we divide the testdata into grids, and normalize the points in each grid by running the following matlab code:  
     ```
     proc_1_normalizeTestdata.m
     ```
@@ -38,7 +38,7 @@ Reproduce the results:
     
 5. At this point we have obtained the stem instances and unsegmented leaves. Run the cornExtract.ext to segment the point cloud into individual maize plants：  
     ```
-    cornExtract pointcnn_test_refined.txt 0.03 0.9
+    cornExtract pointcnn_test_refined.txt 0.03 10
     ```
     cornExtract requires 3 parameters, The first parameter is the stem segment result we just obtained. The second parameter is the search radius R_nghbr of the DBSCAN method. The last parameter is the percentile of number of neighbors for all points,which is used for core point identification in the DBSCAN method.
     Then we get a point cloud stored in "pointcnn_test_refined_cluster.txt". There are 7 columns in this file, which represent X,Y,Z,R,G,B, label(1~40 for each individual maize plant)  
