@@ -1,5 +1,7 @@
 # Corn_segmentation
 
+This repository contains data and codes delevloped by Ao et al. Automatic segmentation of stem and leaf components and individual maize plants in field terrestrial LiDAR data using convolutional neural networks.The Crop Journal.2021
+
 Compile:
 --------
 
