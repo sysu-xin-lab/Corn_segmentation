@@ -1,13 +1,5 @@
 # Corn_segmentation
 
-Citation:
---------
-Zurui Ao, Fangfang Wu, Saihan Hu, Ying Sun, Yanjun Su, Qinghua Guo, Qinchuan Xin,
-Automatic segmentation of stem and leaf components and individual maize plants in field terrestrial LiDAR data using convolutional neural networks,
-The Crop Journal,
-2021.
-
-
 Compile:
 --------
 
@@ -64,3 +56,17 @@ Reproduce the results:
     The segmented individual maize plants are shown as below (colored by label):  
 
 ![Segmented individual maize plants colored by label](pics/fig4.png)  
+
+Citation:
+--------
+```
+@article{AO2021,
+author = {Zurui Ao, Fangfang Wu, Saihan Hu, Ying Sun, Yanjun Su, Qinghua Guo and Qinchuan Xin},
+title = {Automatic segmentation of stem and leaf components and individual maize plants in field terrestrial LiDAR data using convolutional neural networks},
+journal = {The Crop Journal},
+year = {2021},
+issn = {2214-5141},
+doi = {https://doi.org/10.1016/j.cj.2021.10.010},
+url = {https://www.sciencedirect.com/science/article/pii/S2214514121002191}
+}
+```
