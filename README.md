@@ -5,7 +5,9 @@ Citation:
 Zurui Ao, Fangfang Wu, Saihan Hu, Ying Sun, Yanjun Su, Qinghua Guo, Qinchuan Xin,
 Automatic segmentation of stem and leaf components and individual maize plants in field terrestrial LiDAR data using convolutional neural networks,
 The Crop Journal,
-2021,
+2021.
+
+
 Compile:
 --------
 
